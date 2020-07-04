@@ -3373,7 +3373,7 @@ var handleTwProperty = function (ref) {
     var rawClasses = expressionValue || nodeValue.value || '';
     var styles = getStyles(rawClasses, t, state);
     var attributes = path$$1.findParent(function (p) { return p.isJSXOpeningElement(); }).get('attributes');
-    var cssAttributes = attributes.filter(function (p) { return p.node.name && p.node.name.name === 'css'; });
+    var cssAttributes = attributes.filter(function (p) { return p.node.name && p.node.name.name === 'staticClass'; });
 
     if (cssAttributes.length > 0) {
       path$$1.remove();
@@ -3385,7 +3385,7 @@ var handleTwProperty = function (ref) {
         expr.replaceWith(t.arrayExpression([expr.node, styles]));
       }
     } else {
-      path$$1.replaceWith(t.jsxAttribute(t.jsxIdentifier('css'), t.jsxExpressionContainer(styles)));
+      path$$1.replaceWith(t.jsxAttribute(t.jsxIdentifier('staticClass'), t.jsxExpressionContainer(styles)));
     }
 
     addDebugProperty({
