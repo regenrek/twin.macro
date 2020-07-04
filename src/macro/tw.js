@@ -46,7 +46,7 @@ const handleTwProperty = ({ program, t, state }) =>
       } else {
         path.replaceWith(
           t.jsxAttribute(
-            t.jsxIdentifier('css'),
+            t.jsxIdentifier('staticClass'),
             t.jsxExpressionContainer(styles)
           )
         )
