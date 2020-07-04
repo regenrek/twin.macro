@@ -1,8 +1,8 @@
 node_modules
-/macro.js
-/macro.js.map
-/utils.umd.js
-/utils.umd.js.map
+#/macro.js
+#/macro.js.map
+#/utils.umd.js
+#/utils.umd.js.map
 .vscode
 yarn.lock
 

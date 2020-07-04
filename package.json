@@ -12,11 +12,6 @@
     "test": "npm run build && jest && npm run test:types",
     "prepublishOnly": "npm run build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "eslint --cache --fix",
