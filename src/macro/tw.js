@@ -32,7 +32,7 @@ const handleTwProperty = ({ program, t, state }) =>
         .findParent(p => p.isJSXOpeningElement())
         .get('attributes')
       const cssAttributes = attributes.filter(
-        p => p.node.name && p.node.name.name === 'staticClass'
+        p => p.node.name && p.node.name.name === 'css'
       )
 
       if (cssAttributes.length > 0) {
@@ -46,7 +46,7 @@ const handleTwProperty = ({ program, t, state }) =>
       } else {
         path.replaceWith(
           t.jsxAttribute(
-            t.jsxIdentifier('staticClass'),
+            t.jsxIdentifier('css'),
             t.jsxExpressionContainer(styles)
           )
         )
